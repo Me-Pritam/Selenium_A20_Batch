@@ -15,7 +15,7 @@ public class UsingCssSelectorInSauceLabs
             Thread.sleep(2000);
             driver.get("https://www.saucedemo.com/");
             Thread.sleep(2000);
-            driver.findElement(By.cssSelector("input#user-name")).sendKeys("standard_user");
+            driver.findElement(By.cssSelector("input#user-name")).sendKeys(" r");
             Thread.sleep(2000);
             driver.findElement(By.cssSelector("input[name='password']")).sendKeys("secret_sauce");
             Thread.sleep(2000);
