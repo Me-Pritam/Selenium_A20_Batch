@@ -17,22 +17,27 @@ public class UsingXpathBySurroundingMMT
 
            Thread.sleep(2000);
 
-           driver.get("https://www.easemytrip.com/");
+           driver.get("https://www.cleartrip.com/");
 
            Thread.sleep(2000);
 
-           driver.findElement(By.xpath("//div[@id='dvfarecal']"))
+           driver.findElement(By.xpath("//*[name()='svg' and @data-testid='closeIcon']"))
+                           .click();
+
+           Thread.sleep(2000);
+
+           driver.findElement(By.xpath("//div[@data-testid='dateSelectOnward']"))
                    .click();
 
            Thread.sleep(2000);
 
-           WebElement monthBox = driver.findElement(By.xpath("//div[@class='month2']"));
+           WebElement monthBox = driver.findElement(By.xpath("//div[@class='DayPicker-Caption']"));
 
            for(;;)
            {
-               if (monthBox.getText().equalsIgnoreCase("Oct 2026"))
+               if (monthBox.getText().equalsIgnoreCase("October 2026"))
                {
-                   driver.findElement(By.xpath("//div[@class='month2']/../..//li[text()='11']"))
+                   driver.findElement(By.xpath("//div[@class='DayPicker-Caption']/..//div[text()='11']"))
                            .click();
                    break;
                }
@@ -40,7 +45,7 @@ public class UsingXpathBySurroundingMMT
 
                    Thread.sleep(2000);
 
-                   driver.findElement(By.xpath("//img[@onclick=\"NextPrevClick('nxtMnt')\"]"))
+                   driver.findElement(By.xpath("//*[name()='svg' and @data-testid='rightArrow']"))
                            .click();
 
                }
