@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.time.Duration;
 import java.util.List;
@@ -49,9 +50,10 @@ public class HandlingMultipleWindows
 
 
 
+
          Set<String> allPageIds = driver.getWindowHandles();
 
-          System.out.println(allPageIds);
+          System.out.println(allPageIds );
 
          for(String pageId : allPageIds)
          {

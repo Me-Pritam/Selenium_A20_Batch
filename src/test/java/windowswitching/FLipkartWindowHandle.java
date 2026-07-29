@@ -44,6 +44,8 @@ public class FLipkartWindowHandle
 
             Thread.sleep(2000);
 
+//            driver.close();
+
             Set<String> allPageIds = driver.getWindowHandles();
 
             for(String pageId : allPageIds)
@@ -63,6 +65,10 @@ public class FLipkartWindowHandle
 
             driver.findElement(By.xpath("//div[.='Buy now']/ancestor::div[@class='_1psv1zeb9 _1psv1ze0']/descendant::*[name()='svg']"))
                     .click();
+
+            Thread.sleep(2000);
+
+            driver.quit();
         }
         catch (Exception e)
         {
