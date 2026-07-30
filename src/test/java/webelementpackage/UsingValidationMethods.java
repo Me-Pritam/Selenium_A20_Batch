@@ -34,8 +34,6 @@ public class UsingValidationMethods
             {
                 checkBox.click();
 
-                Thread.sleep(1000);
-
             }
 
             WebElement registerButton = driver.findElement(By.xpath("//button[text()='Register now']"));
