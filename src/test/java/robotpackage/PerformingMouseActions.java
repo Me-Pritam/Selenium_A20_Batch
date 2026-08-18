@@ -30,7 +30,11 @@ public class PerformingMouseActions
 
           robot.delay(2000);
 
-          robot.mouseWheel(50);
+//          robot.mouseWheel(50);
+
+          robot.delay(2000);
+
+          robot.mouseMove(800,300);
       }
       catch (Exception e)
       {
