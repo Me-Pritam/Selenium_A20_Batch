@@ -28,11 +28,8 @@ public class HandlingFileUploadPopUpSecondWay
 
             Actions action = new Actions(driver);
 
-
-
             action.click(driver.findElement(By.xpath("//input[@name='file']")))
                     .perform();
-
 
             StringSelection path = new StringSelection("C:\\Users\\User\\Desktop\\DummyUpload.txt");
 
